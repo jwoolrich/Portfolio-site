@@ -1,3 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #aeaeae;
+  border-bottom: 3px solid #4a4a4a;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+selector {
+  margin: 0 auto;
+  width: 1200px;
+  position: relative;
+  float: none;
+
+}
+
+.container {
+  max-width: 1200px;
+}
+
 body {
     background-color: #eeeeee;
     font-family: outfit, sans-serif;
@@ -49,4 +73,35 @@ body {
 .button.contact:hover {
   background-color: #ff7f50;
   color: #ffffff;
+}
+/* Layout styling */
+
+.container {
+  padding: 0 15px;
+}
+.logo {
+  max-width: 250px;
+}
+.navigation {
+  text-align: center;
+}
+.row {
+  margin: 25px 0; 
+}
+#hero h1 {
+  text-align: left;
+  margin: 0;
+  padding: 0.67em 0;
+}
+#hero {
+  background-color: #aeaeae;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #4a4a4a;
 }
