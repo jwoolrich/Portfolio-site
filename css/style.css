@@ -6,23 +6,9 @@ header {
   background-color: #eeeeee;
   border-bottom: 3px solid #eeeeee;
   position: relative;
-
   padding: 5px;
-  margin: 10px;
+  margin: -10px -10px;
   box-shadow: 0px 5px 10px #4a4a4a;
-}
-@media only screen and (min-width: 640px) {
-  header {
-    text-align: unset;
-    padding: 20px 0 13px;
-  }
-
-selector {
-  margin: 0 auto;
-  width: 1200px;
-  position: relative;
-  float: none;
-
 }
 
 .container {
@@ -30,44 +16,47 @@ selector {
 }
 
 body {
-    background-color: #eeeeee;
-    font-family: outfit, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #252525;
-  }
-  
-  h1 {
-    font-size: 2.75em;
-    font-weight: 700;
-  }
-  
-  h2 {
-    font-size: 2.25em;
-    font-weight: 700;
-  }
-  
-  h3 {
-    font-size: 1.75em;
-    font-weight: 700;
-  }
-  
-  h4 {
-    font-size: 1.75em;
-    font-weight: 700;
-  }
-  .button {
-  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #eeeeee;
+  font-family: outfit, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #252525;
+}
+
+h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.50em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.35em;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.35em;
+  font-weight: 700;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
   background-color: #ff4c4d;
-  color: #ffffff; /* needed to override the default link color */
+  color: #ffffff;
   font-weight: 400;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid #994c30; /* width of the border, type, color */
+  border-bottom: 2px solid #994c30;
   transition: 0.2s opacity;
 }
+
 .button:hover {
-  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  opacity: 0.8;
   text-decoration: none;
 }
 
@@ -77,55 +66,157 @@ body {
   text-transform: uppercase;
   border: 2px solid #ff4c4d;
 }
+
 .button.contact:hover {
   background-color: #ff7f50;
   color: #ffffff;
 }
-/* Layout styling */
 
 .container {
   padding: 0 15px;
 }
+
 .logo {
-  max-width: 250px;
+  max-width: 175px;
 }
+
 nav {
-  width: auto;
-  float: right;
-  margin-top: 4px;
+  width:auto;
+  float:center;
+  margin-top: 5px;
 }
 
 .row {
-  margin: 25px 0; 
+  margin: 25px 0;
 }
+
 #hero h1 {
-  text-align: left;
+  text-align:center;
   margin: 0;
   padding: 0.67em 0;
 }
+
 #hero {
   background-color: #eeeeee;
+  text-align: center;
   padding: 20px 0;
   display: inline-block;
   width: 100%;
 }
-nav > ul > li > a {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #4a4a4a;
+
+#footer h2 {
+  text-align:center;
+  margin: 0;
+  padding: 0.67em 0;
 }
-@media only screen and (min-width: 640px) {
-  .content {
-      margin-top: -25px;
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  display:inline-block;
+  width: 100%;
+}
+
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+.berlin-illustration {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+  /* Layout styling */
+
+  nav>ul>li {
+    display: inline-block;
   }
+
+  nav>ul>li>a {
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #4a4a4a;
+    text-decoration: none;
+  }
+
+  nav>ul>li>a:hover {
+    text-transform: uppercase;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  @media only screen and (min-width: 640px) {
+    header {
+      text-align: unset;
+      padding: 20px 0 13px;
+    }
+    nav {
+      width: auto;
+      float: right;
+      margin-top: 0px;
+    }
+    .content {
+      margin-top: -25px;
+    }
+  }
+   
   @media only screen and (min-width: 1024px) {
     .content {
-        margin-top: 30px;
-    }
-    @media only screen and (min-width: 1440px) {
-      .container {
-          max-width: 87%;
-          margin-left: auto;
-          margin-right: auto;
+      margin-top: 30px;
       }
+
+    .col-md-6 {
+      width: 50%;
+    }
+  }
+
+  @media only screen and (min-width: 1440px) {
+    .container {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
