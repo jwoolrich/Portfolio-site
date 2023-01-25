@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/b991b0ef6a.js" crossorigin="anonymous"></script>
     <title>Jerry woolrich | About me</title>
 </head>
   <!--Head end-->
@@ -21,6 +22,8 @@
     <!--Header start-->
     <header>
     <div>
+      <div class="container">
+      <div class="navtoggle" id="myNavtoggle">
       <img src="img/Logo.svg" class="logo" media alt="Jerry Woolrich">
       <nav>
         <ul>
@@ -33,6 +36,7 @@
           <li>
             <a href="contact.html" target="_self">Contact</a>
           </li>
+          <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
         </ul>
       </nav>
       </div>
@@ -144,6 +148,11 @@
 <p>Copyright Jerry Woolrich 2022</p>
 </footer>
 <!--Footer end-->
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
+<script src="js/scripts.js"></script>
 </body>
 <!--Body end-->
 </html>
