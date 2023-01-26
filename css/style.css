@@ -79,12 +79,14 @@ h4 {
 .logo {
   max-width: 150px;
 }
+
 .row {
   margin: 25px 0;
 }
 main {
   padding-top: 56px;
 }
+
 #hero h1 {
   text-align:center;
   margin: 0;
@@ -97,6 +99,24 @@ main {
   padding: 20px 0;
   display: inline-block;
   width: 100%;
+}
+#about img {
+  padding: 40px 0;
+  float: left;
+  width: 50%;
+}
+#about {
+  background-color: #eeeeee;
+  padding: -10px 0;
+  float: center;
+  font-size: 16px;
+  width: 100%;
+
+}
+#about h1 {
+  text-align:center;
+  margin: 0;
+  padding: 0.67em 0;
 }
 
 #footer h2 {
